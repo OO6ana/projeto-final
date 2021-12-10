@@ -1,0 +1,769 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    list-style: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* --------------------------- HEADER -------------------------- */
+
+header{
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 70vh;
+    background-image: url(img/urn_aaid_sc_US_aaf75fc2-eba3-41ec-bc48-de80d0615154.png);
+    background-size: cover;
+    background-position-y: center;
+}
+
+.header-title{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    width: 80%;
+    height: 70%;
+
+    position: relative;
+}
+
+.header-title img{
+    width: 25%;
+}
+
+.header-title img:first-child{
+    width: 22%;
+}
+
+/* --------------------------- ANIMAÇÃO STAR WARS -------------------------- */
+
+.fade-in {
+	-webkit-animation: fade-in 1.2s ease-in both;
+	        animation: fade-in 1.2s ease-in both;
+}
+
+@-webkit-keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+
+.header-title img:nth-of-type(2){
+
+    transform: scale(2.8);
+
+    -webkit-filter: drop-shadow(8px 8px 5px rgb(11, 11, 11));
+    filter: drop-shadow(8px 8px 5px rgb(11, 11, 11));
+
+    margin-right: 15%;
+    padding-top: 60px;
+}
+
+/* --------------------------- ANIMAÇÃO KYLO -------------------------- */
+
+.scale-up-center {
+	-webkit-animation: scale-up-center 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: scale-up-center 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+@-webkit-keyframes scale-up-center {
+    0% {
+      -webkit-transform: scale(0.5);
+              transform: scale(0.5);
+    }
+    100% {
+      -webkit-transform: scale(5);
+              transform: scale(5);
+    }
+  }
+  @keyframes scale-up-center {
+    0% {
+      -webkit-transform: scale(0.5);
+              transform: scale(0.5);
+    }
+    100% {
+      -webkit-transform: scale(3);
+              transform: scale(3);
+    }
+  }
+  
+  /* ---------------HEADER INFOS DO BANNER--------------------- */
+
+  .about-sideimg{
+    width: 24%;
+    height: 28vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(img/sideimg\ fundo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+    margin-top: -20px;
+
+    animation: myAnim2 1s cubic-bezier(0.32, 0, 0.67, 0) 0s 1 normal forwards;
+
+}
+
+@keyframes myAnim2 {
+    0% {
+      opacity: 0;
+      transform: translateX(-250px);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+
+@media (max-width: 768){
+    .about-sideimg{
+        width: 61.5Vw;
+        height: 80vw;
+    }
+    }
+
+@media (max-width: 768px){
+.box-about-sideimg{
+width: 100%;
+}
+}
+
+.box-about-sideimg{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-between;
+width: 90%;
+height: 90%;
+color: #fff;
+opacity: 0.9;
+}
+
+.about-title{
+padding: 2.8vw 0 1vw;
+text-align: center;
+font-size: 2rem;
+line-height: 1.3;
+text-transform: uppercase;
+}
+@media (max-width: 768px) {
+    .about-title{
+    padding: 10vw 0 0;
+    width: 30vw;
+    font-size: 8em;
+    line-height: 1.5;
+    }
+    }
+.about-text{
+width: 100%;
+font-size: 0.8rem;
+line-height: 1.2rem;
+opacity: 0.7;
+}
+@media (max-width: 768px) {
+.about-text {
+padding: 0 10%;
+font-size: 3.6em;
+}
+}
+.about-launch{
+width: 100%;
+text-align: right;
+font-size: 0.5rem;
+opacity: 0.5;
+float: right;
+}
+.download{
+border: 1px solid white;
+background: transparent;
+border-radius: 3px;
+color: white;
+padding: 5px 20px;
+cursor: pointer;
+
+transition: 0.2s;
+}
+.download:hover{
+background: red;
+}
+@media (max-width: 768px){
+    header {
+        background-size: 100%;
+        background-repeat: no-repeat;
+        height: 22vh;
+    }
+
+    .header-title img:nth-of-type(2){
+
+        transform: scale(2.5);
+    
+        -webkit-filter: drop-shadow(5px 5px 5px #222);
+        filter: drop-shadow(5px 5px 5px #222);
+    
+        margin-right: 20%;
+        padding-top: 60px;
+    }
+}
+
+.header-bannerside{
+    width: 60%;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 2rem;
+    text-transform: uppercase;
+}
+@media (max-width: 768px){
+.header-bannerside{
+    position: absolute;
+    right: 3%;
+    top: 85%;
+    font-size: 2.8em;
+}
+}
+.divider{
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    margin: 12px 0;
+}
+p strong{
+    font-weight: 800;
+}
+.side-number{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-evenly;
+
+    width: 13%;
+}
+.side-number p {
+    font-size: 12px;
+}
+.side-number p span{
+    font-size: 18px;
+}
+.side-number button{
+   border: none;
+   background-color: rgb(223, 223, 223);
+   width: 12px;
+   cursor: pointer;
+   font-size: 10px;
+}
+.intro-container{
+    height: 80vw;
+    background-image: url(img/fundo2.png);
+    background-repeat: no-repeat;
+    padding: 0 7Vw 0 14.5Vw;
+}
+@media (max-width: 768px){
+    .intro-container{
+        height: auto;
+        background-size: 71Vw;
+    }
+    }
+.intro-about{
+    height: 80vh;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    border-bottom: 3px solid rgb(65, 65, 77);
+}
+@media (max-width: 768px){
+    .intro-about{
+        flex-direction: column;
+        padding-top: 15Vw;
+        height: auto;
+    }
+    }
+.about{
+    width: 60%;
+    height: 70%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+@keyframes myAnim3 {
+    0% {
+      opacity: 0;
+      transform: rotateX(70deg);
+      transform-origin: top;
+    }
+  
+    100% {
+      opacity: 1;
+      transform: rotateX(0deg);
+      transform-origin: top;
+    }
+  }
+.about-game-text{
+    width: 58%;
+    display: flex;
+    flex-direction: column;
+   align-items: flex-end;
+
+   margin-right: 1rem;
+
+   animation: myAnim3 3s cubic-bezier(0.32, 0, 0.67, 0) 0s 1 normal forwards;
+}
+
+.about-game-text h4 {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.about-divider {
+    width: 22%;
+    height: 2px;
+    background-color: #000;
+    margin: 10px 0;
+}
+
+.about-game-text p{
+    text-align: right;
+    font-size: 0.8rem;
+}
+
+.about-gameimg{
+    width: 35%;
+    display: flex;
+    justify-content: flex-end;
+
+    animation: myAnim3 3s cubic-bezier(0.32, 0, 0.67, 0) 0s 1 normal forwards;
+}
+
+.about-gameimg img{
+    width: 100%;
+
+    transition: 0.2s;
+}
+
+.about-gameimg img:hover{
+   transform: scale(1.2);
+
+   border: 2px solid rgb(252, 68, 68);
+}
+
+.about-game{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 95vh;
+    margin-top: 40px;
+    background-image: url(img/lord-sifh2.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    animation: myAnim 6s cubic-bezier(0.32, 0, 0.67, 0) 0s 1 normal forwards;
+}
+
+@keyframes myAnim {
+    0% {
+      transform: scale(0.5) translateY(0);
+      transform-origin: 50% 16%;
+    }
+  
+    100% {
+      transform: scale(0.9) translateY(-15px);
+      transform-origin: top;
+    }
+  }
+
+.sobre-o-jogo{
+    display: flex;
+    height: 70%;
+}
+
+.game-structure{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.game-structure h4{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    text-align: right;
+    font-weight: 600;
+}
+
+.game-structure h4 strong{
+    font-weight: 800;
+}
+
+.game-structure ul{
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-evenly;
+}
+.game-structure li{
+    width: 100%;
+    text-align: right;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 400;
+    padding: 4px 0;
+
+    transition: 0.3s;
+}
+
+.game-structure li:hover{
+    background: rgb(218, 71, 71);
+    color: white;
+    cursor: pointer;
+}
+
+
+
+.rey{
+    height: 85vh;
+}
+.rey img{
+    height: 100%;
+    margin-top: 30px;
+
+    -webkit-filter: drop-shadow(5px 5px 5px rgb(11, 11, 11));
+    filter: drop-shadow(5px 5px 8px rgb(11, 11, 11));
+    transition: 1s;
+}
+
+.rey img:hover{
+    transform:scale(1.2);
+}
+
+.attributes{
+    width: 100%;
+    background-color: #2D2D2D;
+}
+.box-attributes{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.attributes-title{
+    color: white;
+    font-size: 2rem;
+    padding: 40px 0;
+
+    width: 40%;
+
+    text-align: center;
+}
+
+.box-att-img{
+    width: 100%;
+    display: flex;
+}
+
+.atributos-img-principal {
+    width: 50%;
+}
+
+.atributos-img-principal img{
+    width: 100%;
+}
+
+.att-img-secondary{
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+
+    position: relative;
+    
+}
+
+
+.box-hover {
+    position: relative;
+
+    width: 50%;
+}
+
+.box-hover img {
+    position: relative;
+
+    width: 100%;
+}
+.hoverone {
+    position: relative;
+
+    width: 50%;
+}
+
+.hoverone img {
+    position: relative;
+
+    width: 100%;
+}
+
+
+.hover {
+    position: absolute;
+
+    background: rgb(255, 76, 76);
+
+    font-size: 10px;
+    color: white;
+
+    width: 100%;
+    height: 100%;
+
+    top: 0;
+
+    opacity: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    padding: 14px;
+
+}
+
+.hover:hover {
+    opacity: 0.8;
+    transform: scale(1.06);
+}
+
+.hover-title{
+    font-size: 25px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    width: 25%;
+}
+
+.hover-text{
+    font-size: 15px;
+    width: 65%;
+}
+
+.hover button{
+    background: transparent;
+    width: 30%;
+    padding: 10px 0;
+    border: solid 2px white;
+    color: white;
+    cursor: pointer;
+}
+
+.box-hierarchy{
+    width: 80%;
+    margin: 0 auto;
+
+}
+
+.box-hierarchy img{
+    width: 100%;
+    margin: 20px 0 10px 0;
+}
+
+.box-hierarchy p{
+    text-align: right;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 300;
+    opacity: 0.5;
+}
+
+
+
+
+
+/* --------------------------- COMO JOGAR -------------------------- */
+
+
+.howtoplay {
+    /*border: 2px solid red;*/
+    width: 100%;
+    height: 80vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box-black {
+    background-color: #2D2D2D;
+    width: 100%;
+    height: 50%;
+
+    display: flex;
+    justify-content: center;
+}
+.black-son{
+    width: 80%;
+    margin: 0 auto;
+    position: absolute;
+
+
+    /*border: 2px solid gold;*/
+}
+.htp-title{
+    color: white;
+    font-weight: 800;
+    font-size: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 100px 0 10px 0;
+}
+
+.box-white{
+    background-color: #ffff;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.white-son{
+    width: 80%;
+    position: absolute;
+
+    /*border: 2px solid blue;*/
+    display: flex;
+}
+
+.white-son img {
+    position: relative;
+
+    
+
+    width: 20%;
+}
+
+
+.white-son button{
+    background: black;
+    color: white;
+    height: 7vh;
+    width: 10vw;
+    border: none;
+    font-size: 15px;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.box-tips{
+    width: 25%;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    transition: 0.2s;
+}
+.box-tips:hover button{
+    background: rgb(200, 59, 59);
+    cursor: pointer;
+}
+.box-tips:hover span{
+    background: rgb(200, 59, 59);
+}
+
+.box-tips:hover p:first-child{
+    font-weight: 800;
+}
+
+.box-tips p:nth-of-type(2){
+    font-size: 0.8rem;
+    width: 52%;
+}
+
+.box-tips p:first-child{
+    font-size: 1.5rem;
+}
+
+.box-tips span{
+    width: 35%;
+    height: 5px;
+    background: black;
+}
+
+.tips{
+    width: 25%;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    transition: 0.2s;
+}
+.tips:hover button{
+    background: rgb(200, 59, 59);
+    cursor: pointer;
+}
+.tips:hover span{
+    background: rgb(200, 59, 59);
+}
+
+.tips:hover p:first-child{
+    font-weight: 800;
+}
+
+.tips p:nth-of-type(2){
+    font-size: 0.8rem;
+    width: 52%;
+}
+
+.tips p:first-child{
+    font-size: 1.5rem;
+}
+
+.tips span{
+    width: 35%;
+    height: 5px;
+    background: black;
+}
+
+/*-------FOOTER-----*/
+
+.box-red{
+    background-color: rgb(230, 66, 66);
+    width: 60%;
+    height: 100vh;
+}
+.footer-title{
+    color: #fff;
+    font-weight: 800;
+    font-size: 5vh;
+    display: flex;
+    justify-content: left;
+    padding: 100px 0 0 150px ;
+}
+
+.footer-text{
+    color: #fff;
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: left;
+    padding: 50px 0 0 150px;
+}
